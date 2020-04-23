@@ -16,5 +16,4 @@ public interface ItemDao {
 
     boolean delete(Long id);
 
-
 }
