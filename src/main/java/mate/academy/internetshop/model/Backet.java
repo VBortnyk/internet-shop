@@ -5,7 +5,6 @@ import java.util.List;
 public class Backet {
     private Long id;
     private List<Item> items;
-    private Long orderId;
     private User user;
 
     public Long getUser() {
@@ -14,14 +13,6 @@ public class Backet {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
     }
 
     public List<Item> getItems() {

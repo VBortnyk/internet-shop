@@ -1,14 +1,12 @@
-package mate.academy.internetshop.service;
+package mate.academy.internetshop.lib;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
 import mate.academy.internetshop.dao.ItemDao;
-import mate.academy.internetshop.lib.Dao;
-import mate.academy.internetshop.lib.Inject;
 import mate.academy.internetshop.model.Item;
 
-@Dao
+@Service
 public class ItemServiceImpl implements ItemService {
     @Inject
     private ItemDao itemDao;
@@ -26,13 +24,6 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public List<Item> getAll() {
         return itemDao.getAll();
-    }
-
-    @Override
-    public List<Item> getAllAvailable() {
-        return itemDao.getAll().stream()
-                .filter(i -> i.getCount() > 0)
-                .collect(Collectors.toList());
     }
 
     @Override

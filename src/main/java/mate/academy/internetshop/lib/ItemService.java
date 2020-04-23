@@ -1,4 +1,4 @@
-package mate.academy.internetshop.service;
+package mate.academy.internetshop.lib;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,8 +10,6 @@ public interface ItemService {
     Optional<Item> get(Long id);
 
     List<Item> getAll();
-
-    List<Item> getAllAvailable();
 
     Item update(Item item);
 

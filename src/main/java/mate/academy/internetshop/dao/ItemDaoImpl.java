@@ -19,7 +19,7 @@ public class ItemDaoImpl implements ItemDao {
     public Optional<Item> get(Long id) {
         return Storage.items
                 .stream()
-                .filter(item -> item.getId() == id)
+                .filter(item -> item.getId().equals(id))
                 .findFirst();
     }
 
@@ -31,7 +31,7 @@ public class ItemDaoImpl implements ItemDao {
     @Override
     public Item update(Item item) {
         IntStream.range(0, Storage.items.size())
-                .filter(ind -> Storage.items.get(ind).getId() == (item.getId()))
+                .filter(ind -> Storage.items.get(ind).getId().equals(item.getId()))
                 .findFirst()
                 .ifPresent(ind -> Storage.items.set(ind, item));
         return item;
@@ -39,11 +39,6 @@ public class ItemDaoImpl implements ItemDao {
 
     @Override
     public boolean delete(Long id) {
-        Item item = Storage.items
-                .stream()
-                .filter(i -> i.getId() == id)
-                .findFirst()
-                .orElse(null);
-        return Storage.items.remove(item);
+        return Storage.items.removeIf(item -> item.getId().equals(id));
     }
 }
