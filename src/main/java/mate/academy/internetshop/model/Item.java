@@ -3,7 +3,7 @@ package mate.academy.internetshop.model;
 import mate.academy.internetshop.db.Storage;
 
 public class Item {
-    private final Long id;
+    private Long id;
     private String name;
     private Double price;
 
