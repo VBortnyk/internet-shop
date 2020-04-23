@@ -1,12 +1,11 @@
 package mate.academy.internetshop.dao;
 
-import mate.academy.internetshop.db.Storage;
-import mate.academy.internetshop.lib.Dao;
-import mate.academy.internetshop.model.Item;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
+import mate.academy.internetshop.db.Storage;
+import mate.academy.internetshop.lib.Dao;
+import mate.academy.internetshop.model.Item;
 
 @Dao
 public class ItemDaoImpl implements ItemDao {

@@ -1,9 +1,6 @@
 package mate.academy.internetshop.lib;
 
-import mate.academy.internetshop.service.Service;
-
 import java.io.File;
-
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -13,7 +10,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import mate.academy.internetshop.service.Service;
 
 public class Injector {
     private static final Map<String, Injector> injectors = new HashMap<>();
