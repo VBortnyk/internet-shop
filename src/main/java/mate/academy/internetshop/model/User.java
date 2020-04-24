@@ -1,7 +1,5 @@
 package mate.academy.internetshop.model;
 
-import java.util.Objects;
-
 public class User {
     private Long id;
     private String name;

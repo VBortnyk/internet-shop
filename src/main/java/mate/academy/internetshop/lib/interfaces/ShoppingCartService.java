@@ -1,7 +1,6 @@
 package mate.academy.internetshop.lib.interfaces;
 
 import java.util.List;
-
 import mate.academy.internetshop.lib.injector.Service;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;

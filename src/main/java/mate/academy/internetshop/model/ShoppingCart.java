@@ -7,17 +7,17 @@ public class ShoppingCart {
     private List<Product> products;
     private User user;
 
+    public ShoppingCart(Long id, List<Product> products, User user) {
+        this.id = id;
+        this.products = products;
+        this.user = user;
+    }
+
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
-        this.user = user;
-    }
-
-    public ShoppingCart(Long id, List<Product> products, User user) {
-        this.id = id;
-        this.products = products;
         this.user = user;
     }
 

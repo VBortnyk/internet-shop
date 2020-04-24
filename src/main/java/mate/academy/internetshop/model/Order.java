@@ -7,7 +7,6 @@ public class Order {
     private User user;
     private List<Product> products;
 
-
     public Long getId() {
         return id;
     }

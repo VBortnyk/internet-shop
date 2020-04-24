@@ -1,7 +1,5 @@
 package mate.academy.internetshop.model;
 
-import mate.academy.internetshop.db.Storage;
-
 public class Product {
     private Long id;
     private String name;

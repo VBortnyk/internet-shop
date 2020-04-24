@@ -1,7 +1,6 @@
 package mate.academy.internetshop.lib.impl;
 
 import java.util.List;
-
 import mate.academy.internetshop.dao.interfaces.OrderDao;
 import mate.academy.internetshop.lib.injector.Inject;
 import mate.academy.internetshop.lib.injector.Service;

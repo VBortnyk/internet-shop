@@ -1,15 +1,13 @@
 package mate.academy.internetshop.dao.impl;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.IntStream;
 import mate.academy.internetshop.dao.interfaces.ShoppingCartDao;
 import mate.academy.internetshop.db.Storage;
 import mate.academy.internetshop.lib.injector.Dao;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Dao
 public class ShoppingCartDaoImpl implements ShoppingCartDao {
