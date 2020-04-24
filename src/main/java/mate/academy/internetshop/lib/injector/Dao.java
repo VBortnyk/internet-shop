@@ -1,4 +1,4 @@
-package mate.academy.internetshop.lib;
+package mate.academy.internetshop.lib.injector;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

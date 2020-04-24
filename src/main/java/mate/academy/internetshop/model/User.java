@@ -1,14 +1,16 @@
 package mate.academy.internetshop.model;
 
-public class User {
+import java.util.Objects;
 
+public class User {
     private Long id;
-    private String userName;
+    private String name;
     private String login;
     private String password;
 
-    public User(String userName,String login, String password) {
-        this.userName = userName;
+    public User(String name, String login, String password) {
+        this.id = id;
+        this.name = name;
         this.login = login;
         this.password = password;
     }
@@ -21,12 +23,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLogin() {
@@ -43,5 +45,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id
+                + ", name='" + name + '\''
+                + ", login='" + login + '\''
+                + ", password='" + password + '\'' + '}';
     }
 }
