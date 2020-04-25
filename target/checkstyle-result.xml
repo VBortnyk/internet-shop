@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\Application.java">
+<error line="6" column="8" severity="error" message="Unused import - mate.academy.internetshop.lib.interfaces.OrderService." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\impl\OrderDaoImpl.java">
+<error line="11" column="8" severity="error" message="Unused import - mate.academy.internetshop.model.Product." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="12" column="8" severity="error" message="Unused import - mate.academy.internetshop.model.User." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\impl\ProductDaoImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\impl\ShoppingCartDaoImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\impl\UserDaoImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\OrderDao.java">
+<error line="6" column="8" severity="error" message="Unused import - mate.academy.internetshop.model.Product." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="error" message="Unused import - mate.academy.internetshop.model.User." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\ProductDao.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\ShoppingCartDao.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\UserDao.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\db\Storage.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\impl\OrderServiceImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\impl\ProductServiceImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\impl\ShoppingCartServiceImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\impl\UserServiceImpl.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\injector\Dao.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\injector\Inject.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\injector\Injector.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\injector\Service.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\interfaces\OrderService.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\interfaces\ProductService.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\interfaces\ShoppingCartService.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\lib\interfaces\UserService.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\model\Order.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\model\Product.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\model\ShoppingCart.java">
+</file>
+<file name="C:\Mate-academy\14-internet-shop\src\main\java\mate\academy\internetshop\model\User.java">
+</file>
+</checkstyle>
