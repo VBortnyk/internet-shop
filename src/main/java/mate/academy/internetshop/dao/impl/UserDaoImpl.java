@@ -19,27 +19,27 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public Optional<User> get(Long id) {
-        return Storage.USERS.stream()
+        return Storage.users.stream()
                 .filter(user -> user.getId().equals(id))
                 .findFirst();
     }
 
     @Override
     public List<User> getAll() {
-        return Storage.USERS;
+        return Storage.users;
     }
 
     @Override
     public User update(User user) {
-        IntStream.range(0, Storage.USERS.size())
-                .filter(index -> Storage.USERS.get(index).getId().equals(user.getId()))
+        IntStream.range(0, Storage.users.size())
+                .filter(index -> Storage.users.get(index).getId().equals(user.getId()))
                 .findFirst()
-                .ifPresent(index -> Storage.USERS.set(index, user));
+                .ifPresent(index -> Storage.users.set(index, user));
         return user;
     }
 
     @Override
     public boolean delete(Long id) {
-        return Storage.USERS.removeIf(user -> user.getId().equals(id));
+        return Storage.users.removeIf(user -> user.getId().equals(id));
     }
 }

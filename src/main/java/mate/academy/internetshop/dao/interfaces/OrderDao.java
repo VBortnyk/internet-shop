@@ -8,7 +8,7 @@ import mate.academy.internetshop.model.User;
 
 public interface OrderDao {
 
-    Order create(List<Product> products, User user);
+    Order create(Order order);
 
     Optional<Order> get(Long orderId);
 

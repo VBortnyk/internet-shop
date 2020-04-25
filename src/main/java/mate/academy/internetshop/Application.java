@@ -14,12 +14,10 @@ public class Application {
     private static Injector injector = Injector.getInstance("mate.academy.internetshop");
 
     public static void main(String[] args) {
-        ProductService itemService = (ProductService) injector.getInstance(ProductService.class);
         ProductService productService = (ProductService) injector.getInstance(ProductService.class);
         UserService userService = (UserService) injector.getInstance(UserService.class);
         ShoppingCartService cartService = (ShoppingCartService) injector
                 .getInstance(ShoppingCartService.class);
-        OrderService orderService = (OrderService) injector.getInstance(OrderService.class);
 
         checkProductDB(productService);
         checkUserDB(userService);
@@ -39,7 +37,7 @@ public class Application {
     }
 
     private static void checkUserDB(UserService userService) {
-        User user1 = new User("Usre1", "login1", "one");
+        User user1 = new User("User1", "login1", "one");
         User user2 = new User("User2", "login2", "two");
 
         userService.create(user1);

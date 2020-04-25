@@ -9,10 +9,10 @@ import mate.academy.internetshop.model.User;
 
 public class Storage {
 
-    public static final List<Product> PRODUCTS = new ArrayList<>();
-    public static final List<ShoppingCart> SHOPPINGCARTS = new ArrayList<>();
-    public static final List<User> USERS = new ArrayList<>();
-    public static final List<Order> ORDERS = new ArrayList<>();
+    public static final List<Product> products = new ArrayList<>();
+    public static final List<ShoppingCart> shoppingCarts = new ArrayList<>();
+    public static final List<User> users = new ArrayList<>();
+    public static final List<Order> orders = new ArrayList<>();
     private static Long productId = 0L;
     private static Long shoppingCartId = 0L;
     private static Long userId = 0L;
@@ -20,22 +20,22 @@ public class Storage {
 
     public static void add(Product product) {
         product.setId(++productId);
-        PRODUCTS.add(product);
+        products.add(product);
     }
 
     public static void add(ShoppingCart shoppingCart) {
         shoppingCart.setId(++shoppingCartId);
-        SHOPPINGCARTS.add(shoppingCart);
+        shoppingCarts.add(shoppingCart);
     }
 
     public static void add(User user) {
         user.setId(++userId);
-        USERS.add(user);
+        users.add(user);
     }
 
     public static void add(Order order) {
         order.setId(++orderId);
-        ORDERS.add(order);
+        orders.add(order);
 
     }
 }

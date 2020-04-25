@@ -15,49 +15,46 @@ import mate.academy.internetshop.model.User;
 public class OrderDaoImpl implements OrderDao {
 
     @Override
-    public Order create(List<Product> products, User user) {
-        Order order = new Order();
-        order.setProducts(products);
-        order.setUser(user);
+    public Order create(Order order) {
         Storage.add(order);
         return order;
     }
 
     @Override
     public Optional<Order> get(Long orderId) {
-        return Storage.ORDERS.stream()
+        return Storage.orders.stream()
                 .filter(order -> order.getId().equals(orderId))
                 .findFirst();
     }
 
     @Override
     public List<Order> getUserOrders(Long userId) {
-        return Storage.ORDERS.stream()
+        return Storage.orders.stream()
                 .filter(order -> order.getUser().getId().equals(userId))
                 .collect(Collectors.toList());
     }
 
     @Override
     public Order update(Order order) {
-        IntStream.range(0, Storage.ORDERS.size())
-                .filter(index -> Storage.ORDERS.get(index).getId().equals(order.getId()))
-                .forEach(index -> Storage.ORDERS.set(index, order));
+        IntStream.range(0, Storage.orders.size())
+                .filter(index -> Storage.orders.get(index).getId().equals(order.getId()))
+                .forEach(index -> Storage.orders.set(index, order));
         return order;
     }
 
     @Override
     public boolean delete(Long orderId) {
-        return Storage.ORDERS.removeIf(order -> order.getId().equals(orderId));
+        return Storage.orders.removeIf(order -> order.getId().equals(orderId));
     }
 
     @Override
     public boolean delete(Order order) {
-        return Storage.ORDERS.remove(order);
+        return Storage.orders.remove(order);
 
     }
 
     @Override
     public List<Order> getAll() {
-        return Storage.ORDERS;
+        return Storage.orders;
     }
 }

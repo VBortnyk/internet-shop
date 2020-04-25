@@ -15,17 +15,14 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public ShoppingCart addProduct(ShoppingCart shoppingCart, Product product) {
-        if (shoppingCart.getId() == null) {
-            shoppingCartDao.create(shoppingCart);
-        }
         shoppingCart.getProducts().add(product);
         return shoppingCartDao.update(shoppingCart);
     }
 
     @Override
     public boolean deleteProduct(ShoppingCart shoppingCart, Product product) {
-        shoppingCart.getProducts().removeIf(product1 -> product.getId()
-                .equals(product1.getId()));
+        shoppingCart.getProducts().removeIf(product1 -> product1.getId()
+                .equals(product.getId()));
         shoppingCartDao.update(shoppingCart);
         return true;
     }
