@@ -9,11 +9,13 @@ import mate.academy.internetshop.lib.interfaces.ShoppingCartService;
 import mate.academy.internetshop.lib.interfaces.UserService;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.User;
+import org.w3c.dom.ls.LSOutput;
 
 public class Application {
     private static Injector injector = Injector.getInstance("mate.academy.internetshop");
 
     public static void main(String[] args) {
+        System.out.println("Test");
         ProductService productService = (ProductService) injector.getInstance(ProductService.class);
         UserService userService = (UserService) injector.getInstance(UserService.class);
         ShoppingCartService cartService = (ShoppingCartService) injector
