@@ -1,14 +1,11 @@
 package mate.academy.internetshop.model;
 
-import mate.academy.internetshop.db.Storage;
-
-public class Item {
+public class Product {
     private Long id;
     private String name;
     private Double price;
 
-    public Item(String name, Double price) {
-        this.id = ++Storage.idGenerator;
+    public Product(String name, Double price) {
         this.name = name;
         this.price = price;
     }
@@ -29,6 +26,10 @@ public class Item {
         this.name = name;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
@@ -39,3 +40,4 @@ public class Item {
                 + ", id: " + id;
     }
 }
+
