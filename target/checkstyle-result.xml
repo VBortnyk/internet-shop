@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\Application.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\controller\IndexController.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\impl\OrderDaoImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\impl\ProductDaoImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\impl\ShoppingCartDaoImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\impl\UserDaoImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\OrderDao.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\ProductDao.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\ShoppingCartDao.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\dao\interfaces\UserDao.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\db\Storage.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\lib\Dao.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\lib\Inject.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\lib\Injector.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\lib\Service.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\model\Order.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\model\Product.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\model\ShoppingCart.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\model\User.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\impl\OrderServiceImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\impl\ProductServiceImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\impl\ShoppingCartServiceImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\impl\UserServiceImpl.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\interfaces\OrderService.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\interfaces\ProductService.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\interfaces\ShoppingCartService.java">
+</file>
+<file name="C:\Test\internet-shop\src\main\java\mate\academy\internetshop\service\interfaces\UserService.java">
+</file>
+</checkstyle>
