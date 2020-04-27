@@ -7,6 +7,7 @@ import mate.academy.internetshop.dao.interfaces.OrderDao;
 import mate.academy.internetshop.db.Storage;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Order;
+import mate.academy.internetshop.model.User;
 
 @Dao
 public class OrderDaoImpl implements OrderDao {
@@ -22,13 +23,6 @@ public class OrderDaoImpl implements OrderDao {
         return Storage.orders.stream()
                 .filter(order -> order.getId().equals(orderId))
                 .findFirst().get();
-    }
-
-    @Override
-    public List<Order> getUserOrders(Long userId) {
-        return Storage.orders.stream()
-                .filter(order -> order.getUser().getId().equals(userId))
-                .collect(Collectors.toList());
     }
 
     @Override
@@ -48,6 +42,13 @@ public class OrderDaoImpl implements OrderDao {
     public boolean delete(Order order) {
         return Storage.orders.remove(order);
 
+    }
+
+    @Override
+    public List<Order> getUserOrders(Long userId) {
+        return Storage.orders.stream()
+                .filter(order -> order.getUser().getId().equals(userId))
+                .collect(Collectors.toList());
     }
 
     @Override

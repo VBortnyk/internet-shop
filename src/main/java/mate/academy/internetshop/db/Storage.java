@@ -35,6 +35,7 @@ public class Storage {
 
     public static void add(Order order) {
         order.setId(++orderId);
+        order.getUser().getOrders().add(order);
         orders.add(order);
     }
 }

@@ -1,16 +1,27 @@
 package mate.academy.internetshop.model;
 
+import java.util.List;
+
 public class User {
 
     private Long id;
     private String userName;
     private String login;
     private String password;
+    private List<Order> orders;
 
     public User(String userName,String login, String password) {
         this.userName = userName;
         this.login = login;
         this.password = password;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     public Long getId() {

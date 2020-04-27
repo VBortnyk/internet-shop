@@ -11,8 +11,4 @@ public interface OrderService extends GenericService<Order, Long>{
     Order completeOrder(User user, List<Product> products);
 
     List<Order> getUserOrders(User user);
-
-    Order get(Long id);
-
-    boolean delete(Long id);
 }
