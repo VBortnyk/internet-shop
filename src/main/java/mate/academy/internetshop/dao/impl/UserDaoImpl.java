@@ -1,11 +1,10 @@
 package mate.academy.internetshop.dao.impl;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.IntStream;
 import mate.academy.internetshop.dao.interfaces.UserDao;
 import mate.academy.internetshop.db.Storage;
-import mate.academy.internetshop.lib.injector.Dao;
+import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.User;
 
 @Dao
@@ -18,10 +17,11 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Optional<User> get(Long id) {
+    public User get(Long id) {
         return Storage.users.stream()
                 .filter(user -> user.getId().equals(id))
-                .findFirst();
+                .findFirst()
+                .get();
     }
 
     @Override

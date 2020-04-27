@@ -1,20 +1,12 @@
-package mate.academy.internetshop.lib.interfaces;
+package mate.academy.internetshop.service.interfaces;
 
 import java.util.List;
 import mate.academy.internetshop.model.Order;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.User;
 
-public interface OrderService {
-
+public interface OrderService extends GenericService<Order, Long> {
     Order completeOrder(User user, List<Product> products);
 
     List<Order> getUserOrders(User user);
-
-    Order get(Long id);
-
-    List<Order> getAll();
-
-    boolean delete(Long id);
-
 }
