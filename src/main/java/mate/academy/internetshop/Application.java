@@ -2,14 +2,12 @@ package mate.academy.internetshop;
 
 import java.util.Arrays;
 import java.util.List;
-import mate.academy.internetshop.lib.injector.Injector;
-import mate.academy.internetshop.lib.interfaces.OrderService;
-import mate.academy.internetshop.lib.interfaces.ProductService;
-import mate.academy.internetshop.lib.interfaces.ShoppingCartService;
-import mate.academy.internetshop.lib.interfaces.UserService;
+import mate.academy.internetshop.lib.Injector;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.User;
-import org.w3c.dom.ls.LSOutput;
+import mate.academy.internetshop.service.interfaces.ProductService;
+import mate.academy.internetshop.service.interfaces.ShoppingCartService;
+import mate.academy.internetshop.service.interfaces.UserService;
 
 public class Application {
     private static Injector injector = Injector.getInstance("mate.academy.internetshop");

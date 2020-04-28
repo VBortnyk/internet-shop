@@ -1,4 +1,4 @@
-package mate.academy.internetshop.lib.injector;
+package mate.academy.internetshop.lib;
 
 import java.io.File;
 import java.io.IOException;

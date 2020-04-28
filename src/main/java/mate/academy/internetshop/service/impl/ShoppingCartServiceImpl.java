@@ -1,12 +1,12 @@
-package mate.academy.internetshop.lib.impl;
+package mate.academy.internetshop.service.impl;
 
 import java.util.List;
 import mate.academy.internetshop.dao.interfaces.ShoppingCartDao;
-import mate.academy.internetshop.lib.injector.Inject;
-import mate.academy.internetshop.lib.injector.Service;
-import mate.academy.internetshop.lib.interfaces.ShoppingCartService;
+import mate.academy.internetshop.lib.Inject;
+import mate.academy.internetshop.lib.Service;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;
+import mate.academy.internetshop.service.interfaces.ShoppingCartService;
 
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService {

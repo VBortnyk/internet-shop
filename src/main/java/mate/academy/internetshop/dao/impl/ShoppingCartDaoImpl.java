@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 import mate.academy.internetshop.dao.interfaces.ShoppingCartDao;
 import mate.academy.internetshop.db.Storage;
-import mate.academy.internetshop.lib.injector.Dao;
+import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;
 
@@ -18,10 +18,11 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
     }
 
     @Override
-    public Optional<ShoppingCart> get(Long shoppingCartId) {
+    public ShoppingCart get(Long shoppingCartId) {
         return Storage.shoppingCarts.stream()
                 .filter(shoppingCart -> shoppingCart.getId().equals(shoppingCartId))
-                .findFirst();
+                .findFirst()
+                .get();
     }
 
     @Override

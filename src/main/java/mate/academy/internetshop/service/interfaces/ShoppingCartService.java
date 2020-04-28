@@ -1,13 +1,12 @@
-package mate.academy.internetshop.lib.interfaces;
+package mate.academy.internetshop.service.interfaces;
 
 import java.util.List;
-import mate.academy.internetshop.lib.injector.Service;
+import mate.academy.internetshop.lib.Service;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;
 
 @Service
 public interface ShoppingCartService {
-
     ShoppingCart addProduct(ShoppingCart shoppingCart, Product product);
 
     boolean deleteProduct(ShoppingCart shoppingCart, Product product);
