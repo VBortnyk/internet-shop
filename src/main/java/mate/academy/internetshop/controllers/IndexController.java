@@ -1,4 +1,4 @@
-package mate.academy.internetshop.controller;
+package mate.academy.internetshop.controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,6 +10,7 @@ public class IndexController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+
         req.getRequestDispatcher("WEB-INF/views/index.jsp").forward(req, resp);
     }
 }

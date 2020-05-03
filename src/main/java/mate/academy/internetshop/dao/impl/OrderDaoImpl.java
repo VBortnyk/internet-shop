@@ -25,6 +25,11 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public List<Order> getAll() {
+        return Storage.orders;
+    }
+
+    @Override
     public Order update(Order order) {
         IntStream.range(0, Storage.orders.size())
                 .filter(index -> Storage.orders.get(index).getId().equals(order.getId()))
@@ -49,11 +54,4 @@ public class OrderDaoImpl implements OrderDao {
                 .filter(order -> order.getUser().getId().equals(userId))
                 .collect(Collectors.toList());
     }
-
-    @Override
-    public List<Order> getAll() {
-        return Storage.orders;
-    }
 }
-
-

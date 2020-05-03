@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <jdk.version>13</jdk.version>
+        <jdk.version>14</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.checkstyle.plugin.version>3.1.1</maven.checkstyle.plugin.version>
@@ -18,7 +18,18 @@
             https://raw.githubusercontent.com/mate-academy/style-guides/master/java/checkstyle.xml
         </maven.checkstyle.plugin.configLocation>
     </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -26,9 +37,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
     </dependencies>
     <build>
@@ -57,7 +68,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+                    <webXml>src/main/webapp/web.xml</webXml>
                 </configuration>
             </plugin>
         </plugins>
