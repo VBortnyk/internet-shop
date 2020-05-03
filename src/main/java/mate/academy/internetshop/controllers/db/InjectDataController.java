@@ -1,4 +1,4 @@
-package mate.academy.internetshop.controllers.DB;
+package mate.academy.internetshop.controllers.db;
 
 import java.io.IOException;
 import java.util.List;
