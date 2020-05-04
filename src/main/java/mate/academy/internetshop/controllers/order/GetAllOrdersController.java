@@ -10,7 +10,7 @@ import mate.academy.internetshop.lib.Injector;
 import mate.academy.internetshop.model.Order;
 import mate.academy.internetshop.service.interfaces.OrderService;
 
-public class OrderController extends HttpServlet {
+public class GetAllOrdersController extends HttpServlet {
     private static final Injector injector
             = Injector.getInstance("mate.academy.internetshop");
     private OrderService orderService
@@ -23,6 +23,6 @@ public class OrderController extends HttpServlet {
         List<Order> allOrders = orderService.getAll();
         req.setAttribute("orders", allOrders);
 
-        req.getRequestDispatcher("/WEB-INF/views/orders/all.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/orders/allOrders.jsp").forward(req, resp);
     }
 }

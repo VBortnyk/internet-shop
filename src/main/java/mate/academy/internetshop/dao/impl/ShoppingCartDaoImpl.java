@@ -18,11 +18,11 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
     }
 
     @Override
-    public ShoppingCart get(Long shoppingCartId) {
+    public Optional<ShoppingCart> get(Long shoppingCartId) {
         return Storage.shoppingCarts.stream()
                 .filter(shoppingCart -> shoppingCart.getId().equals(shoppingCartId))
-                .findFirst()
-                .get();
+                .findFirst();
+
     }
 
     @Override

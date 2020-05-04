@@ -1,4 +1,4 @@
-package mate.academy.internetshop.controllers.db;
+package mate.academy.internetshop.controllers.product;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.service.interfaces.ProductService;
 import mate.academy.internetshop.service.interfaces.UserService;
 
-public class StorageController extends HttpServlet {
+public class GetAllProductsController extends HttpServlet {
     private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private ProductService productService
             = (ProductService) injector.getInstance(ProductService.class);
@@ -22,11 +22,12 @@ public class StorageController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        List<Product> storage = productService.getAll();
+        List<Product> products = productService.getAll();
 
         Long userId = (Long) req.getSession().getAttribute("userId");
         String userLogin = userService.get(userId).getLogin();
-        req.setAttribute("storage", storage);
+
+        req.setAttribute("products", products);
         if (userLogin.equals("admin")) {
             req.getRequestDispatcher("/WEB-INF/views/storage/storageAdmin.jsp").forward(req, resp);
         } else {

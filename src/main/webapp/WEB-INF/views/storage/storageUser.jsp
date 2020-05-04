@@ -13,7 +13,7 @@
         <th>Name</th>
         <th>Price</th>
     </tr>
-    <c:forEach var="product" items="${storage}">
+    <c:forEach var="product" items="${products}">
         <tr>
             <td>
                 <c:out value="${product.id}"/>
@@ -25,12 +25,12 @@
                 <c:out value="${product.price}"/>
             </td>
             <td>
-                <a href="${pageContext.request.contextPath}/cart/add?id=${product.id}">Add to cart</a>
+                <a href="${pageContext.request.contextPath}/carts/add?id=${product.id}">Add to cart</a>
             </td>
         </tr>
     </c:forEach>
 </table>
 <br>
-<button onclick="document.location='/user/account'">My cart</button>
+<button onclick="document.location='/carts/details'">My cart</button>
 </body>
 </html>

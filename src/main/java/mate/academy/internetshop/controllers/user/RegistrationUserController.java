@@ -32,7 +32,7 @@ public class RegistrationUserController extends HttpServlet {
         String password = req.getParameter("pwd");
         String passwordConf = req.getParameter("pwd-confirmation");
 
-        if (password.equals(passwordConf) && !password.equals("")) {
+        if (password.equals(passwordConf) && !password.isEmpty()) {
 
             User user = new User(name, login, password);
             ShoppingCart shoppingCart = new ShoppingCart(user);

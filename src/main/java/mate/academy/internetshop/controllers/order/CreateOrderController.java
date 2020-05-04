@@ -23,10 +23,15 @@ public class CreateOrderController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        ShoppingCart shoppingCart = shoppingCartService.getByUserId(USER_ID);
+        Long userId = (Long) req.getSession().getAttribute("userId");
+        ShoppingCart shoppingCart = shoppingCartService.getByUserId(userId);
+
         if (shoppingCart.getProducts().size() != 0) {
             orderService.completeOrder(shoppingCart);
+            resp.sendRedirect(req.getContextPath() + "/orders/all");
+        } else {
+            req.setAttribute("message", "Shopping cart is empty");
+            req.getRequestDispatcher("/WEB-INF/views/storage/storageUser.jsp").forward(req, resp);
         }
-        req.getRequestDispatcher("WEB-INF/views/index.jsp").forward(req, resp);
     }
 }

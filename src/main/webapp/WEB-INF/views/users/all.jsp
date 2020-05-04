@@ -22,12 +22,6 @@
                 <c:out value="${user.name}"/>
             </td>
             <td>
-                <c:out value="${user.name}"/>cart
-            </td>
-            <td>
-                <a href="${pageContext.request.contextPath}/user/account?id=${user.id}">Info</a>
-            </td>
-            <td>
                 <a href="${pageContext.request.contextPath}/users/delete?id=${user.id}">Delete</a>
             </td>
         </tr>

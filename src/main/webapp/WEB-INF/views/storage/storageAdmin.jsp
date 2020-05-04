@@ -13,7 +13,7 @@
         <th>Name</th>
         <th>Price</th>
     </tr>
-    <c:forEach var="product" items="${storage}">
+    <c:forEach var="product" items="${products}">
         <tr>
             <td>
                 <c:out value="${product.id}"/>

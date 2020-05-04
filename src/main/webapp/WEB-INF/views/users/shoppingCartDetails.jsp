@@ -26,7 +26,10 @@
 <%--        </tr>--%>
 <%--    </c:forEach>--%>
 <%--</table>--%>
+
+<h1>Welcome </h1> <h4 style="color: red">${message}</h4>
 <h2>My shopping cart</h2>
+
 <table border="1">
     <tr>
         <th>ID</th>

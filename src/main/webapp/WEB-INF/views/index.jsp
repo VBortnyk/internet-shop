@@ -17,6 +17,8 @@
     <br>
     <a href="${pageContext.request.contextPath}/users/all">All Users</a>
     <br>
+    <a href="${pageContext.request.contextPath}/carts/details">Shopping cart</a>
+    <br>
     <a href="${pageContext.request.contextPath}/products/create">Add products to storage(admin only)</a>
     <br>
 </h3>

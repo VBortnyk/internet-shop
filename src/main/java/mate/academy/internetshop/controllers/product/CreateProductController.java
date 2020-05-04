@@ -20,8 +20,8 @@ public class CreateProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        List<Product> storage = productService.getAll();
-        req.setAttribute("storage", storage);
+        List<Product> products = productService.getAll();
+        req.setAttribute("products", products);
         req.getRequestDispatcher("/WEB-INF/views/products/create.jsp").forward(req, resp);
     }
 
@@ -30,8 +30,9 @@ public class CreateProductController extends HttpServlet {
             throws ServletException, IOException {
         String name = req.getParameter("name");
         String priceString = req.getParameter("price");
-        Double price = Double.parseDouble(priceString);
-        if (!name.equals("") && !price.equals("")) {
+
+        if (!name.isEmpty() && !priceString.isEmpty()) {
+            Double price = Double.parseDouble(priceString);
             Product product = new Product(name, price);
             productService.create(product);
             resp.sendRedirect(req.getContextPath() + "/products/create");

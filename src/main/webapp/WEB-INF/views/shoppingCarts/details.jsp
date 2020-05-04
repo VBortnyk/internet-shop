@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Available products</h1>
+<h1>My shopping cart</h1>
 
 <table border="1">
     <tr>
@@ -13,7 +13,7 @@
         <th>Name</th>
         <th>Price</th>
     </tr>
-    <c:forEach var="product" items="${cart}">
+    <c:forEach var="product" items="${products}">
         <tr>
             <td>
                 <c:out value="${product.id}"/>
@@ -25,12 +25,12 @@
                 <c:out value="${product.price}"/>
             </td>
             <td>
-                <a href="${pageContext.request.contextPath}/storage/delete?id=${product.id}">Delete</a>
+                <a href="${pageContext.request.contextPath}/carts/delete?id=${product.id}">Delete</a>
             </td>
         </tr>
     </c:forEach>
-    <br>
-    <a href="${pageContext.request.contextPath}/storage/delete?id=${product.id}">Confirm and pay</a>
 </table>
+<br>
+<button onclick="document.location='/orders/create'">Create order</button>
 </body>
 </html>

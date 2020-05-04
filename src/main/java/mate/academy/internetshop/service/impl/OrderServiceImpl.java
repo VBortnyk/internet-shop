@@ -20,14 +20,6 @@ public class OrderServiceImpl implements OrderService {
     @Inject
     private ShoppingCartService shoppingCartService;
 
-    @Override
-    public Order completeOrder(User user, List<Product> products) {
-        Order newOrder = new Order(user, products);
-        orderDao.create(newOrder);
-        shoppingCartService.clear(shoppingCartService.getByUserId(user.getId()));
-        return orderDao.create(newOrder);
-    }
-
     public Order completeOrder(ShoppingCart shoppingCart) {
         User user = shoppingCart.getUser();
         List<Product> allProducts = new ArrayList<>(shoppingCart.getProducts());
@@ -37,7 +29,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order get(Long id) {
-        return orderDao.get(id);
+        return orderDao.get(id).get();
     }
 
     @Override

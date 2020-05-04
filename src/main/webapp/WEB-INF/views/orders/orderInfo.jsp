@@ -10,16 +10,12 @@
 <table border="1">
     <tr>
         <th>Product ID</th>
-        <th>Product name</th>
         <th>Product price</th>
     </tr>
-    <c:forEach var="product" items="${order}">
+    <c:forEach var="product" items="${products}">
         <tr>
             <td>
                 <c:out value="${product.id}"/>
-            </td>
-            <td>
-                <c:out value="${product.name}"/>
             </td>
             <td>
                 <c:out value="${product.price}"/>

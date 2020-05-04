@@ -14,7 +14,7 @@
 
     <servlet>
         <servlet-name>allUsers</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.user.UserController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.user.GetAllUsersController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>allUsers</servlet-name>
@@ -49,17 +49,17 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>orders</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.order.CreateOrderController</servlet-class>
+        <servlet-name>showCartDetails</servlet-name>
+        <servlet-class>mate.academy.internetshop.controllers.shoppingCart.GetProductsInCartController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>orders</servlet-name>
-        <url-pattern>/oders</url-pattern>
+        <servlet-name>showCartDetails</servlet-name>
+        <url-pattern>/carts/details</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>storage</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.db.StorageController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.product.GetAllProductsController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>storage</servlet-name>
@@ -82,16 +82,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>addToCart</servlet-name>
-        <url-pattern>/cart/add</url-pattern>
+        <url-pattern>/carts/add</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>userAccount</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.user.UserAccountController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.user.GetUserOrderDetails</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>userAccount</servlet-name>
-        <url-pattern>/user/account</url-pattern>
+        <url-pattern>/users/account</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -100,7 +100,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>deleteFromCart</servlet-name>
-        <url-pattern>/cart/delete</url-pattern>
+        <url-pattern>/carts/delete</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -109,12 +109,12 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>createOrder</servlet-name>
-        <url-pattern>/create</url-pattern>
+        <url-pattern>/orders/create</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>allOrders</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.order.OrderController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.order.GetAllOrdersController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>allOrders</servlet-name>
@@ -123,7 +123,7 @@
 
     <servlet>
         <servlet-name>orderDetails</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.order.ShowOrderDetailsController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.order.GetOrderDetailsController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>orderDetails</servlet-name>

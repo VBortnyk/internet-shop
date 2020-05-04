@@ -18,11 +18,10 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public User get(Long id) {
+    public Optional<User> get(Long id) {
         return Storage.users.stream()
                 .filter(user -> user.getId().equals(id))
-                .findFirst()
-                .get();
+                .findFirst();
     }
 
     @Override
@@ -40,8 +39,8 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean delete(Long id) {
-        return Storage.users.removeIf(user -> user.getId().equals(id));
+    public boolean delete(Long userId) {
+        return Storage.users.removeIf(user -> user.getId().equals(userId));
     }
 
     @Override

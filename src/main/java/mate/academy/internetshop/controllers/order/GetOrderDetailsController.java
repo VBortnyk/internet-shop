@@ -7,14 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import mate.academy.internetshop.lib.Injector;
-import mate.academy.internetshop.model.Order;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.service.interfaces.OrderService;
+import mate.academy.internetshop.service.interfaces.ProductService;
+import mate.academy.internetshop.service.interfaces.UserService;
 
-public class ShowOrderDetailsController extends HttpServlet {
+public class GetOrderDetailsController extends HttpServlet {
     private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private static final OrderService orderService
             = (OrderService) injector.getInstance(OrderService.class);
+    private static final UserService userService
+            = (UserService) injector.getInstance(UserService.class);
+    private static final ProductService productService
+            = (ProductService) injector.getInstance(ProductService.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -22,11 +27,8 @@ public class ShowOrderDetailsController extends HttpServlet {
 
         String orderId = req.getParameter("id");
         Long id = Long.valueOf(orderId);
-        Order order = orderService.get(id);
-        List<Product> products = order.getProducts();
-
-        req.setAttribute("order", products);
-        req.getRequestDispatcher("/WEB-INF/views/orders/userOrderDetails.jsp").forward(req, resp);
-
+        List<Product> products = productService.getAll();
+        req.setAttribute("products", products);
+        req.getRequestDispatcher("/WEB-INF/views/orders/orderInfo.jsp").forward(req, resp);
     }
 }
