@@ -12,7 +12,6 @@ import mate.academy.internetshop.service.interfaces.OrderService;
 import mate.academy.internetshop.service.interfaces.UserService;
 
 public class GetUserOrderDetails extends HttpServlet {
-    private static final Long USER_ID = 1L;
     private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private OrderService orderService = (OrderService) injector.getInstance(OrderService.class);
     private UserService userService = (UserService)injector.getInstance(UserService.class);

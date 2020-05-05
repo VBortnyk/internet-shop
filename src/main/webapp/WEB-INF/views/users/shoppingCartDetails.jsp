@@ -6,26 +6,6 @@
 </head>
 <body>
 <h1>User cabinet</h1>
-<%--<h2>My orders</h2>--%>
-<%--<table border ="1">--%>
-<%--    <tr>--%>
-<%--        <th>Order ID</th>--%>
-<%--        <th>Total price</th>--%>
-<%--    </tr>--%>
-<%--    <c:forEach var="order"  items="${allOrders}">--%>
-<%--        <tr>--%>
-<%--            <td>--%>
-<%--                <c:out value="${order.id}"/>--%>
-<%--            </td>--%>
-<%--            <td>--%>
-<%--                <c:out value=""/>--%>
-<%--            </td>--%>
-<%--            <td>--%>
-<%--                <a href="${pageContext.request.contextPath}/orders/delete?id=${order.id}">Delete</a>--%>
-<%--            </td>--%>
-<%--        </tr>--%>
-<%--    </c:forEach>--%>
-<%--</table>--%>
 
 <h1>Welcome </h1> <h4 style="color: red">${message}</h4>
 <h2>My shopping cart</h2>
