@@ -1,11 +1,12 @@
 package mate.academy.internetshop.dao.interfaces;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface GenericDao<T, K> {
     T create(T value);
 
-    T get(K value);
+    Optional<T> get(K value);
 
     List<T> getAll();
 

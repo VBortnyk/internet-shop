@@ -14,6 +14,11 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     private ShoppingCartDao shoppingCartDao;
 
     @Override
+    public ShoppingCart create(ShoppingCart shoppingCart) {
+        return shoppingCartDao.create(shoppingCart);
+    }
+
+    @Override
     public ShoppingCart addProduct(ShoppingCart shoppingCart, Product product) {
         shoppingCart.getProducts().add(product);
         return shoppingCartDao.update(shoppingCart);
@@ -21,10 +26,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public boolean deleteProduct(ShoppingCart shoppingCart, Product product) {
-        shoppingCart.getProducts().removeIf(product1 -> product1.getId()
-                .equals(product.getId()));
+        boolean remove = shoppingCart.getProducts().remove(product);
         shoppingCartDao.update(shoppingCart);
-        return true;
+        return remove;
     }
 
     @Override
@@ -41,5 +45,20 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     @Override
     public List<Product> getAllProducts(ShoppingCart shoppingCart) {
         return shoppingCartDao.getAllProducts(shoppingCart);
+    }
+
+    @Override
+    public ShoppingCart get(Long id) {
+        return shoppingCartDao.get(id).get();
+    }
+
+    @Override
+    public List<ShoppingCart> getAll() {
+        return shoppingCartDao.getAll();
+    }
+
+    @Override
+    public boolean delete(Long shoppingCartId) {
+        return shoppingCartDao.delete(shoppingCartId);
     }
 }

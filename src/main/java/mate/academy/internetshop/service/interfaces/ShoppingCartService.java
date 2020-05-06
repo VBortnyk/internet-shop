@@ -6,7 +6,10 @@ import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.model.ShoppingCart;
 
 @Service
-public interface ShoppingCartService {
+public interface ShoppingCartService extends GenericService<ShoppingCart, Long> {
+
+    ShoppingCart create(ShoppingCart shoppingCart);
+
     ShoppingCart addProduct(ShoppingCart shoppingCart, Product product);
 
     boolean deleteProduct(ShoppingCart shoppingCart, Product product);

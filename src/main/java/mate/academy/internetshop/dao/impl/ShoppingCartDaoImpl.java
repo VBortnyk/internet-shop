@@ -18,17 +18,29 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
     }
 
     @Override
-    public ShoppingCart get(Long shoppingCartId) {
+    public Optional<ShoppingCart> get(Long shoppingCartId) {
         return Storage.shoppingCarts.stream()
                 .filter(shoppingCart -> shoppingCart.getId().equals(shoppingCartId))
-                .findFirst()
-                .get();
+                .findFirst();
+
+    }
+
+    @Override
+    public List<Product> getAllProducts(ShoppingCart shoppingCart) {
+        return Storage.shoppingCarts.stream()
+                .filter(cart -> cart.getId().equals(shoppingCart.getId()))
+                .findFirst().get().getProducts();
+    }
+
+    @Override
+    public List<ShoppingCart> getAll() {
+        return Storage.shoppingCarts;
     }
 
     @Override
     public Optional<ShoppingCart> getByUserId(Long userId) {
         return Storage.shoppingCarts.stream()
-                .filter(shoppingCart -> shoppingCart.getUser().getId().equals(userId))
+                .filter(shoppingCart -> shoppingCart.getUserId().equals(userId))
                 .findFirst();
     }
 
@@ -51,16 +63,5 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
     public boolean delete(ShoppingCart shoppingCart) {
         return Storage.shoppingCarts.remove(shoppingCart);
     }
-
-    @Override
-    public List<Product> getAllProducts(ShoppingCart shoppingCart) {
-        return Storage.shoppingCarts.stream()
-                .filter(cart -> cart.getId().equals(shoppingCart.getId()))
-                .findFirst().get().getProducts();
-    }
-
-    @Override
-    public List<ShoppingCart> getAll() {
-        return Storage.shoppingCarts;
-    }
 }
+
