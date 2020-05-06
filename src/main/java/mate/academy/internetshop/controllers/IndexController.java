@@ -19,6 +19,7 @@ public class IndexController extends HttpServlet {
 
         Long userId = (Long) req.getSession().getAttribute("userId");
         String userName = userService.get(userId).getName();
+
         req.setAttribute("name", userName);
         req.getRequestDispatcher("WEB-INF/views/index.jsp").forward(req, resp);
     }
