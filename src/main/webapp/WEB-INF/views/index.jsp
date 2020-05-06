@@ -4,7 +4,8 @@
     <title>SHOP</title>
 </head>
 <body>
-<h1>Welcome!</h1>
+<h1>Welcome, ${name}!</h1>
+
 <h3>Please <a href="${pageContext.request.contextPath}/injectData">Load DB</a>
     to get access to storage
 </h3>
@@ -20,6 +21,9 @@
     <a href="${pageContext.request.contextPath}/carts/details">Shopping cart</a>
     <br>
     <a href="${pageContext.request.contextPath}/products/create">Add products to storage(admin only)</a>
+    <br>
+    <br>
+    <a href="${pageContext.request.contextPath}/logout">Logout</a>
     <br>
 </h3>
 </body>

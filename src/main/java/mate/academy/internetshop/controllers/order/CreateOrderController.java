@@ -27,7 +27,7 @@ public class CreateOrderController extends HttpServlet {
 
         if (shoppingCart.getProducts().size() != 0) {
             orderService.completeOrder(shoppingCart);
-            resp.sendRedirect(req.getContextPath() + "/orders/all");
+            resp.sendRedirect(req.getContextPath() + "/orders/all-user-orders");
         } else {
             req.setAttribute("message", "Shopping cart is empty");
             req.getRequestDispatcher("/WEB-INF/views/storage/storageUser.jsp").forward(req, resp);

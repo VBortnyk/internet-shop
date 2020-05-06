@@ -32,5 +32,8 @@
 </table>
 <br>
 <button onclick="document.location='/carts/details'">My cart</button>
+<br>
+<button onclick="document.location='/'">Home</button>
+
 </body>
 </html>

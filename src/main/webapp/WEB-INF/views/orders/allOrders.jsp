@@ -19,7 +19,7 @@
                 <c:out value="${order.id}"/>
             </td>
             <td>
-                <c:out value="${order.user.id}"/>
+                <c:out value="${order.userId}"/>
             </td>
             <td>
                 <a href="${pageContext.request.contextPath}/orders/details?id=${order.id}">Info</a>
@@ -31,5 +31,7 @@
         </tr>
     </c:forEach>
 </table>
+<br>
+<button onclick="document.location='/'">Home</button>
 </body>
 </html>

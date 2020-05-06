@@ -21,10 +21,10 @@ public class OrderServiceImpl implements OrderService {
     private ShoppingCartService shoppingCartService;
 
     public Order completeOrder(ShoppingCart shoppingCart) {
-        User user = shoppingCart.getUser();
+        Long userId = shoppingCart.getUserId();
         List<Product> allProducts = new ArrayList<>(shoppingCart.getProducts());
         shoppingCartService.clear(shoppingCart);
-        return orderDao.create(new Order(user, allProducts));
+        return orderDao.create(new Order(userId, allProducts));
     }
 
     @Override

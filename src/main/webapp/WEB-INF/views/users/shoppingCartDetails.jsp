@@ -37,6 +37,8 @@
     <button onclick="document.location='/create'">Complete order</button>
     <br>
      <button onclick="document.location='/storage'">Shop</button>
+    <br>
+    <button onclick="document.location='/'">Home</button>
 </h3>
 </body>
 </html>

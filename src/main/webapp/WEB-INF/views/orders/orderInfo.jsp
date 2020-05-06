@@ -23,5 +23,7 @@
         </tr>
     </c:forEach>
 </table>
+<br>
+<button onclick="document.location='/'">Home</button>
 </body>
 </html>

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import mate.academy.internetshop.lib.Injector;
 import mate.academy.internetshop.model.Product;
+import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.service.interfaces.ProductService;
 import mate.academy.internetshop.service.interfaces.UserService;
 
@@ -28,7 +29,8 @@ public class GetAllProductsController extends HttpServlet {
         String userLogin = userService.get(userId).getLogin();
 
         req.setAttribute("products", products);
-        if (userLogin.equals("admin")) {
+
+        if (userService.get(userId).getRoles().contains(Role.RoleName.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/views/storage/storageAdmin.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("/WEB-INF/views/storage/storageUser.jsp").forward(req, resp);

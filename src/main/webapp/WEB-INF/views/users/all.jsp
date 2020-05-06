@@ -27,5 +27,8 @@
         </tr>
     </c:forEach>
 </table>
+<br>
+<h4 style="color: #ff0000">${message}</h4>
+<button onclick="document.location='/'">Home</button>
 </body>
 </html>
