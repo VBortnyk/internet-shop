@@ -15,8 +15,10 @@ import mate.academy.internetshop.lib.Injector;
 import mate.academy.internetshop.model.Role;
 import mate.academy.internetshop.model.User;
 import mate.academy.internetshop.service.interfaces.UserService;
+import org.apache.log4j.Logger;
 
 public class AuthorisationFilter implements Filter {
+    private final Logger logger = Logger.getLogger(AuthorisationFilter.class);
     private HashMap<String, List<Role.RoleName>> protectedUrls = new HashMap<>();
     private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private UserService userService = (UserService) injector.getInstance(UserService.class);
@@ -59,6 +61,7 @@ public class AuthorisationFilter implements Filter {
         if (isAuthorized(user, protectedUrls.get(requestedUrl))) {
             chain.doFilter(req, resp);
         } else {
+            logger.warn("User with id " + userId + " tried attended to reach url: " + requestedUrl);
             req.getRequestDispatcher("/WEB-INF/views/accessDenied.jsp").forward(req, resp);
         }
     }
