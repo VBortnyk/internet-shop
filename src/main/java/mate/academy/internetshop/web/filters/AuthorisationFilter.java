@@ -18,9 +18,9 @@ import mate.academy.internetshop.service.interfaces.UserService;
 import org.apache.log4j.Logger;
 
 public class AuthorisationFilter implements Filter {
+    private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private final Logger logger = Logger.getLogger(AuthorisationFilter.class);
     private HashMap<String, List<Role.RoleName>> protectedUrls = new HashMap<>();
-    private static final Injector injector = Injector.getInstance("mate.academy.internetshop");
     private UserService userService = (UserService) injector.getInstance(UserService.class);
 
     @Override

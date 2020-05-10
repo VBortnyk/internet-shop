@@ -20,7 +20,6 @@ public class DeleteOrderController extends HttpServlet {
         Long id = Long.valueOf(orderId);
         orderService.delete(id);
 
-
         resp.sendRedirect(req.getContextPath() + "/orders/all-user-orders");
     }
 }

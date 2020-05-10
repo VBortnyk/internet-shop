@@ -10,14 +10,6 @@ public class User {
     private String password;
     private Set<Role> roles;
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
     public User(String name) {
         this.name = name;
     }
@@ -28,6 +20,14 @@ public class User {
         this.login = login;
         this.password = password;
         this.roles = new HashSet<>();
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     public Long getId() {
