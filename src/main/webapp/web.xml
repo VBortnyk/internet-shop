@@ -13,6 +13,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>injectData</servlet-name>
+        <servlet-class>mate.academy.internetshop.controllers.db.InjectDataController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>injectData</servlet-name>
+        <url-pattern>/injectData</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>allUsers</servlet-name>
         <servlet-class>mate.academy.internetshop.controllers.user.GetAllUsersController</servlet-class>
     </servlet>
@@ -109,16 +118,6 @@
     <servlet-mapping>
         <servlet-name>storage</servlet-name>
         <url-pattern>/storage</url-pattern>
-    </servlet-mapping>
-
-
-    <servlet>
-        <servlet-name>injectData</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.db.InjectDataController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>injectData</servlet-name>
-        <url-pattern>/injectData</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -24,7 +24,7 @@ public class ConnectionUtil {
         try {
             return DriverManager.getConnection(url, properties);
         } catch (SQLException ex) {
-            throw new DataBaseAccessException(
+            throw new RuntimeException(
                     "Incorrect address or the resource is not available", ex);
         }
     }

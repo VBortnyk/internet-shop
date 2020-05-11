@@ -10,9 +10,11 @@ import java.util.List;
 import java.util.Optional;
 import mate.academy.internetshop.dao.interfaces.ProductDao;
 import mate.academy.internetshop.exceptions.DataProcessingException;
+import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Product;
 import mate.academy.internetshop.util.ConnectionUtil;
 
+@Dao
 public class ProductDaoJdbcImpl implements ProductDao {
     public static final String COLUMN = "product_id";
 
