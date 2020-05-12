@@ -77,7 +77,7 @@
 
     <servlet>
         <servlet-name>shoppingCarts</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.shoppingCart.AddToCartController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.cart.AddToCartController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>shoppingCarts</servlet-name>
@@ -86,7 +86,7 @@
 
     <servlet>
         <servlet-name>showCartDetails</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.shoppingCart.GetProductsInCartController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.cart.GetProductsInCartController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>showCartDetails</servlet-name>
@@ -95,7 +95,7 @@
 
     <servlet>
         <servlet-name>addToCart</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.shoppingCart.AddToCartController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.cart.AddToCartController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>addToCart</servlet-name>
@@ -104,7 +104,7 @@
 
     <servlet>
         <servlet-name>deleteFromCart</servlet-name>
-        <servlet-class>mate.academy.internetshop.controllers.shoppingCart.DeleteFromCartController</servlet-class>
+        <servlet-class>mate.academy.internetshop.controllers.cart.DeleteFromCartController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>deleteFromCart</servlet-name>
