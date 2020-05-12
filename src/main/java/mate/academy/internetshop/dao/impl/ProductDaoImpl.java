@@ -5,13 +5,12 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 import mate.academy.internetshop.dao.interfaces.ProductDao;
 import mate.academy.internetshop.db.Storage;
-import mate.academy.internetshop.lib.Dao;
+import mate.academy.internetshop.exceptions.DataBaseAccessException;
 import mate.academy.internetshop.model.Product;
 
-@Dao
 public class ProductDaoImpl implements ProductDao {
     @Override
-    public Product create(Product product) {
+    public Product create(Product product) throws DataBaseAccessException {
         Storage.add(product);
         return product;
     }

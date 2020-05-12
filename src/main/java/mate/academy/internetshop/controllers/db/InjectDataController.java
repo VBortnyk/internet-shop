@@ -35,7 +35,6 @@ public class InjectDataController extends HttpServlet {
         productService.create(phone);
         productService.create(laptop);
         productService.create(charger);
-        List<Product> storage = productService.getAll();
 
         User admin = new User("admin", "admin","1");
         admin.setRoles(Set.of(Role.of("ADMIN")));
@@ -44,6 +43,7 @@ public class InjectDataController extends HttpServlet {
         ShoppingCart shoppingCart = new ShoppingCart(admin.getId());
         shoppingCartService.create(shoppingCart);
 
+        List<Product> storage = productService.getAll();
         req.setAttribute("storage", storage);
         resp.sendRedirect(req.getContextPath() + "/");
 
