@@ -9,7 +9,6 @@ import mate.academy.internetshop.exceptions.DataBaseAccessException;
 import mate.academy.internetshop.lib.Dao;
 import mate.academy.internetshop.model.Product;
 
-@Dao
 public class ProductDaoImpl implements ProductDao {
     @Override
     public Product create(Product product) throws DataBaseAccessException {
