@@ -24,12 +24,9 @@ public class GetAllProductsController extends HttpServlet {
             throws ServletException, IOException {
 
         List<Product> products = productService.getAll();
-
-        Long userId = (Long) req.getSession().getAttribute("userId");
-        String userLogin = userService.get(userId).getLogin();
-
         req.setAttribute("products", products);
 
+        Long userId = (Long) req.getSession().getAttribute("userId");
         if (userService.get(userId).getRoles().contains(Role.RoleName.ADMIN)) {
             req.getRequestDispatcher("/WEB-INF/views/storage/storageAdmin.jsp").forward(req, resp);
         } else {
