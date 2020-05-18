@@ -16,20 +16,19 @@ import mate.academy.internetshop.util.ConnectionUtil;
 
 @Dao
 public class ProductDaoJdbcImpl implements ProductDao {
-    public static final String COLUMN = "product_id";
 
     @Override
     public Product create(Product product) {
-        Connection connection = ConnectionUtil.getConnection();
         String query = "INSERT INTO products (name, price) VALUES (?, ?);";
-        try (PreparedStatement statement
-                     = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            PreparedStatement statement
+                    = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, product.getName());
             statement.setDouble(2, product.getPrice());
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
-                product.setId(resultSet.getLong(COLUMN));
+                product.setId(resultSet.getLong(1));
             }
             return product;
         } catch (SQLException ex) {
@@ -40,9 +39,11 @@ public class ProductDaoJdbcImpl implements ProductDao {
 
     @Override
     public Optional<Product> get(Long id) {
-        Connection connection = ConnectionUtil.getConnection();
+
         String query = "SELECT * FROM products WHERE product_id = ?;";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setLong(1, id);
             ResultSet result = statement.executeQuery();
             if (result.next()) {
                 Product product = getProductFromResultSet(result);
@@ -57,10 +58,10 @@ public class ProductDaoJdbcImpl implements ProductDao {
 
     @Override
     public List<Product> getAll() {
-        Connection connection = ConnectionUtil.getConnection();
-        String query = "SELECT * FROM products;";
+        String query = "SELECT product_id, name, price FROM products;";
         List<Product> products = new ArrayList<>();
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(query);
             ResultSet result = statement.executeQuery();
             while (result.next()) {
                 Product product = getProductFromResultSet(result);
@@ -74,9 +75,10 @@ public class ProductDaoJdbcImpl implements ProductDao {
 
     @Override
     public Product update(Product product) {
-        Connection connection = ConnectionUtil.getConnection();
+
         String query = "UPDATE products SET name=?, price=? WHERE product_id=?;";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, product.getName());
             statement.setDouble(2, product.getPrice());
             statement.setLong(3, product.getId());
@@ -89,9 +91,9 @@ public class ProductDaoJdbcImpl implements ProductDao {
 
     @Override
     public boolean delete(Long id) {
-        Connection connection = ConnectionUtil.getConnection();
         String query = "DELETE FROM products WHERE product_id=?;";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            PreparedStatement statement = connection.prepareStatement(query);
             statement.setLong(1, id);
             return statement.executeUpdate() > 0;
         } catch (SQLException ex) {
@@ -100,9 +102,10 @@ public class ProductDaoJdbcImpl implements ProductDao {
     }
 
     public Product getProductFromResultSet(ResultSet resultSet) throws SQLException {
-        Product product = new Product(resultSet.getString("product_name"),
-                resultSet.getDouble("product_price"));
-        product.setId((resultSet.getLong("product_id")));
+        Product product = new Product(
+                resultSet.getLong("product_id"),
+                resultSet.getString("name"),
+                resultSet.getDouble("price"));
         return product;
     }
 }

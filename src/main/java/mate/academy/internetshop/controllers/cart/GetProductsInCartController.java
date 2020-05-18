@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import mate.academy.internetshop.lib.Injector;
 import mate.academy.internetshop.model.Product;
+import mate.academy.internetshop.model.ShoppingCart;
 import mate.academy.internetshop.service.interfaces.ShoppingCartService;
 
 public class GetProductsInCartController extends HttpServlet {
@@ -21,8 +22,8 @@ public class GetProductsInCartController extends HttpServlet {
             throws ServletException, IOException {
 
         Long userId = (Long) req.getSession().getAttribute("userId");
-        List<Product> products = shoppingCartService.getByUserId(userId).getProducts();
-
+        ShoppingCart shoppingCart = shoppingCartService.getByUserId(userId);
+        List<Product> products = shoppingCartService.getAllProducts(shoppingCart);
         req.setAttribute("products", products);
         req.getRequestDispatcher("/WEB-INF/views/shoppingCarts/details.jsp").forward(req, resp);
     }
