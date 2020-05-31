@@ -15,6 +15,10 @@
 </form>
 <h3>Don't have your profile yet? Please pass registration</h3>
 <button onclick="document.location='/registration'">Registration</button>
+<br>
+<br>
+<button onclick="document.location='/injectData'">inject data</button>
+</h3>
 
 </body>
 </html>

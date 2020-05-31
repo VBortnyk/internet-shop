@@ -2,23 +2,28 @@ CREATE SCHEMA `internet_shop` DEFAULT CHARACTER SET utf8;
 
 CREATE TABLE `users`
 (
-    `user_id`  bigint       NOT NULL AUTO_INCREMENT,
-    `name`     varchar(256) NOT NULL,
-    `login`    varchar(256) NOT NULL,
+    `user_id` bigint NOT NULL AUTO_INCREMENT,
+    `name` varchar(256) NOT NULL,
+    `login` varchar(256) NOT NULL,
     `password` varchar(256) NOT NULL,
+    `salt` varbinary(500) NOT NULL,
     PRIMARY KEY (`user_id`),
     UNIQUE KEY `login_UNIQUE` (`login`)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `roles`
 (
-    `role_id`   bigint       NOT NULL AUTO_INCREMENT,
+    `role_id`   bigint(11)       NOT NULL AUTO_INCREMENT,
     `role_name` varchar(256) NOT NULL,
     PRIMARY KEY (`role_id`),
     UNIQUE KEY `role_name_UNIQUE` (`role_name`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
+
+insert into roles(role_name)
+values ('ADMIN');
+insert into roles(role_name)
+values ('USER');
 
 CREATE TABLE `users_roles`
 (
@@ -56,10 +61,11 @@ CREATE TABLE `internet_shop`.`shopping_carts`
 
 CREATE TABLE `internet_shop`.`products`
 (
-    `product_id` BIGINT(11)   NOT NULL,
-    `name`       VARCHAR(256) NOT NULL,
-    `price`      DOUBLE       NOT NULL,
-    PRIMARY KEY (`product_id`)
+    `product_id` BIGINT         NOT NULL AUTO_INCREMENT,
+    `name`       VARCHAR(255)   NOT NULL,
+    `price`      DECIMAL(11, 2) NOT NULL,
+    PRIMARY KEY (`product_id`),
+    UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE
 );
 
 CREATE TABLE `orders_products`
