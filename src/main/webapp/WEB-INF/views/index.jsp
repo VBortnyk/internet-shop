@@ -6,9 +6,6 @@
 <body>
 <h1>Welcome, ${name}!</h1>
 
-<h3>Please <a href="${pageContext.request.contextPath}/injectData">Load DB</a>
-    to get access to storage
-</h3>
 <h3>
     <a href="${pageContext.request.contextPath}/registration">Registration</a>
     <br>
