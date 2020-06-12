@@ -44,5 +44,5 @@ Apple, Pear and Plum.
 #
 
 #### Author
-Viacheslav Bortnyk: https://github.com/Oleh888/internet-shop
+Viacheslav Bortnyk: https://github.com/VBortnyk/internet-shop
 
