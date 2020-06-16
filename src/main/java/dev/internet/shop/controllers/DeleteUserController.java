@@ -24,6 +24,6 @@ public class DeleteUserController extends HttpServlet {
         Long id = Long.valueOf(userId);
         shoppingCartService.delete(shoppingCartService.getByUserId(id).getId());
         userService.delete(id);
-        req.getRequestDispatcher("/WEB-INF/views/orders/allOrders.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/users/all.jsp").forward(req, resp);
     }
 }

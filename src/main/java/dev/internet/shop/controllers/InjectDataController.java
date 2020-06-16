@@ -45,9 +45,9 @@ public class InjectDataController extends HttpServlet {
             shoppingCartService.create(adminCart);
             shoppingCartService.create(userCart);
         } catch (DataProcessingException e) {
-            req.getRequestDispatcher("WEB-INF/views/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("WEB-INF/views/security/login.jsp").forward(req, resp);
         }
         req.setAttribute("storage", storage);
-        resp.sendRedirect(req.getContextPath() + "/");
+        resp.sendRedirect(req.getContextPath() + "/login");
     }
 }

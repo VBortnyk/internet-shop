@@ -45,7 +45,7 @@ public class RegistrationUserController extends HttpServlet {
             } catch (DataProcessingException e) {
                 req.setAttribute(
                         "message", "User with login: "
-                                + login + " already exists. Please chose another one");
+                                + login + " already exists. Please choose another one");
                 req.getRequestDispatcher(
                         "/WEB-INF/views/users/registration.jsp").forward(req, resp);
             }
