@@ -3,10 +3,9 @@ package dev.internet.shop.service.impl;
 import dev.internet.shop.dao.ShoppingCartDao;
 import dev.internet.shop.lib.Inject;
 import dev.internet.shop.lib.Service;
-import dev.internet.shop.service.ShoppingCartService;
 import dev.internet.shop.model.Product;
 import dev.internet.shop.model.ShoppingCart;
-
+import dev.internet.shop.service.ShoppingCartService;
 import java.util.List;
 
 @Service

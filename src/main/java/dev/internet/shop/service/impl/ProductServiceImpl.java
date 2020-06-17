@@ -3,9 +3,8 @@ package dev.internet.shop.service.impl;
 import dev.internet.shop.dao.ProductDao;
 import dev.internet.shop.lib.Inject;
 import dev.internet.shop.lib.Service;
-import dev.internet.shop.service.ProductService;
 import dev.internet.shop.model.Product;
-
+import dev.internet.shop.service.ProductService;
 import java.util.List;
 
 @Service

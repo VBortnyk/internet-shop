@@ -3,13 +3,12 @@ package dev.internet.shop.controllers;
 import dev.internet.shop.lib.Injector;
 import dev.internet.shop.model.Order;
 import dev.internet.shop.service.OrderService;
-
+import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
 
 public class GetAllExistingOrdersController extends HttpServlet {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

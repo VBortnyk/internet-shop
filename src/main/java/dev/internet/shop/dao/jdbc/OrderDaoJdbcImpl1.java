@@ -1,12 +1,11 @@
 package dev.internet.shop.dao.jdbc;
 
 import dev.internet.shop.dao.OrderDao;
-import dev.internet.shop.lib.Dao;
 import dev.internet.shop.exceptions.DataProcessingException;
+import dev.internet.shop.lib.Dao;
 import dev.internet.shop.model.Order;
 import dev.internet.shop.model.Product;
 import dev.internet.shop.util.ConnectionUtil;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

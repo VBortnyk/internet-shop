@@ -2,11 +2,10 @@ package dev.internet.shop.controllers;
 
 import dev.internet.shop.lib.Injector;
 import dev.internet.shop.service.OrderService;
-
+import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class DeleteOrderController extends HttpServlet {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

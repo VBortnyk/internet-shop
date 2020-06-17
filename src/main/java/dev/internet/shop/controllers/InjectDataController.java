@@ -9,14 +9,13 @@ import dev.internet.shop.model.User;
 import dev.internet.shop.service.ProductService;
 import dev.internet.shop.service.ShoppingCartService;
 import dev.internet.shop.service.UserService;
-
+import java.io.IOException;
+import java.util.List;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
-import java.util.Set;
 
 public class InjectDataController extends HttpServlet {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

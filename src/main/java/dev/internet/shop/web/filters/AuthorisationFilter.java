@@ -4,8 +4,9 @@ import dev.internet.shop.lib.Injector;
 import dev.internet.shop.model.Role;
 import dev.internet.shop.model.User;
 import dev.internet.shop.service.UserService;
-import org.apache.log4j.Logger;
-
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -14,9 +15,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
+import org.apache.log4j.Logger;
 
 public class AuthorisationFilter implements Filter {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

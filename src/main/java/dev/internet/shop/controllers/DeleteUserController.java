@@ -3,12 +3,11 @@ package dev.internet.shop.controllers;
 import dev.internet.shop.lib.Injector;
 import dev.internet.shop.service.ShoppingCartService;
 import dev.internet.shop.service.UserService;
-
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class DeleteUserController extends HttpServlet {
     private static final Injector INJECTOR

@@ -1,8 +1,8 @@
 package dev.internet.shop.web.filters;
 
-import dev.internet.shop.service.UserService;
 import dev.internet.shop.lib.Injector;
-
+import dev.internet.shop.service.UserService;
+import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -11,7 +11,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class AuthenticationFilter implements Filter {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

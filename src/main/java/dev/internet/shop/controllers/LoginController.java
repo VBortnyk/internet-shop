@@ -4,13 +4,12 @@ import dev.internet.shop.exceptions.AuthenticationException;
 import dev.internet.shop.lib.Injector;
 import dev.internet.shop.model.User;
 import dev.internet.shop.security.AuthenticationService;
-
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 
 public class LoginController extends HttpServlet {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

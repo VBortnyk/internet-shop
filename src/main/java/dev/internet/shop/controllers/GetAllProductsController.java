@@ -5,13 +5,12 @@ import dev.internet.shop.model.Product;
 import dev.internet.shop.model.Role;
 import dev.internet.shop.service.ProductService;
 import dev.internet.shop.service.UserService;
-
+import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
 
 public class GetAllProductsController extends HttpServlet {
     private static final Injector INJECTOR = Injector.getInstance("dev.internet.shop");

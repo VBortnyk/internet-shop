@@ -5,11 +5,10 @@ import dev.internet.shop.model.Product;
 import dev.internet.shop.model.ShoppingCart;
 import dev.internet.shop.service.ProductService;
 import dev.internet.shop.service.ShoppingCartService;
-
+import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 public class DeleteFromCartController extends HttpServlet {
     private static final Injector INJECTOR

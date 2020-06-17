@@ -3,7 +3,6 @@ package dev.internet.shop.service;
 import dev.internet.shop.lib.Service;
 import dev.internet.shop.model.Product;
 import dev.internet.shop.model.ShoppingCart;
-
 import java.util.List;
 
 @Service
