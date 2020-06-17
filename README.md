@@ -31,7 +31,7 @@ storage, delete products and delete users from the list of users registered at t
 add the artifact internet-shop:war exploded;
 add as URL http://localhost:8080/
 4. Start MySQLWorkbench.
-5. At internet-shop.src.main.java.dev.internet.shop.util.ConnectionUtil class use your username 
+5. At internet-shop.src.main.java.dev.internet.ConnectionUtil class use your username 
 and password for your MySQLWorkbench to create a Connection.
 6. Run internet-shop.src.main.resources.init_db.sql to create all the tables required by this app.
 7. Change a path to log file in internet-shop.src.main.resources.log4j.properties.
